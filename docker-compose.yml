@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  postgres:
+    image: "postgres"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: cargo_autoinherit_test
+      POSTGRES_USER: cargo_autoinherit_test
+      POSTGRES_DB: cargo_autoinherit_test
+    ports:
+      - 5432:5432
+  postgres_test:
+    image: "postgres"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: cargo_autoinherit_test_test
+      POSTGRES_USER: cargo_autoinherit_test_test
+      POSTGRES_DB: cargo_autoinherit_test_test
+    ports:
+      - 5433:5432
